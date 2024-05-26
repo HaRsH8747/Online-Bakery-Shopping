@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXComboBox?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.TilePane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="600.0" prefWidth="998.0" style="-fx-background-color: #2a2e37;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="adminDashboard.ViewproductsController">
+   <children>
+      <VBox prefHeight="600.0" prefWidth="1000.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <HBox alignment="CENTER_LEFT" prefHeight="79.0" prefWidth="1000.0" spacing="10.0">
+               <children>
+                  <JFXComboBox fx:id="cbCategory" focusColor="#ffff8d" labelFloat="true" prefHeight="32.0" prefWidth="171.0" promptText="Select Category" style="-fx-font-size: 14; -fx-prompt-text-fill: b2b2b2; -fx-text-fill: fff8d;" unFocusColor="#ffff8d">
+                     <HBox.margin>
+                        <Insets left="100.0" />
+                     </HBox.margin>
+                  </JFXComboBox>
+                  <Label text="Price Range :" textFill="#ffff8d">
+                     <HBox.margin>
+                        <Insets left="130.0" />
+                     </HBox.margin>
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Label>
+                  <JFXTextField fx:id="txtFrom" focusColor="#ffff8d" labelFloat="true" prefHeight="30.0" prefWidth="120.0" promptText="From" style="-fx-prompt-text-fill: b2b2b2; -fx-text-fill: ffff8d;" unFocusColor="#ffff8d">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                     <HBox.margin>
+                        <Insets left="20.0" />
+                     </HBox.margin>
+                  </JFXTextField>
+                  <JFXTextField fx:id="txtTo" focusColor="#ffff8d" labelFloat="true" prefHeight="30.0" prefWidth="120.0" promptText="To" style="-fx-prompt-text-fill: b2b2b2; -fx-text-fill: ffff8d;" unFocusColor="#ffff8d">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                     <HBox.margin>
+                        <Insets left="20.0" />
+                     </HBox.margin>
+                  </JFXTextField>
+                  <JFXButton buttonType="RAISED" onAction="#search" prefHeight="34.0" prefWidth="85.0" ripplerFill="#ffff8d" style="-fx-border-color: #ffff8d; -fx-border-radius: 20; -fx-border-width: 1.5; -fx-background-radius: 20;" text="Search" textFill="#ffff8d">
+                     <HBox.margin>
+                        <Insets left="40.0" />
+                     </HBox.margin>
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </JFXButton>
+               </children>
+            </HBox>
+            <ScrollPane hbarPolicy="NEVER" prefHeight="521.0" prefWidth="1000.0" style="-fx-border-color: #b2b2b2 #2a2e37 #2a2e37 #2a2e37; -fx-background-color: #2a2e37;">
+               <content>
+                  <TilePane fx:id="tpProductList" prefHeight="518.0" prefWidth="1000.0" style="-fx-background-color: #2a2e37;">
+                     <padding>
+                        <Insets top="10.0" />
+                     </padding>
+                  </TilePane>
+               </content>
+            </ScrollPane>
+         </children>
+      </VBox>
+   </children>
+</AnchorPane>

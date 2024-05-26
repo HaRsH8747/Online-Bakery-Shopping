@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXListView?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.TilePane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="642.0" prefWidth="1000.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="products.ProductListController">
+   <children>
+      <VBox alignment="TOP_CENTER" layoutX="14.0" layoutY="160.0" minWidth="-Infinity" prefHeight="642.0" prefWidth="300.0" spacing="20.0" style="-fx-border-color: #ffff8d; -fx-border-width: 2; -fx-background-color: #2A2E37;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="802.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <JFXButton fx:id="btnback" maxWidth="-Infinity" onAction="#close" prefHeight="34.0" prefWidth="20.0" text=" " translateX="-127.0">
+               <graphic>
+                  <ImageView fx:id="ivback" fitHeight="26.0" fitWidth="35.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../icons/arrow.png" />
+                     </image></ImageView>
+               </graphic>
+               <VBox.margin>
+                  <Insets left="10.0" top="1.0" />
+               </VBox.margin>
+            </JFXButton>
+            <Label text="Select Categories" textFill="#ffff8d" underline="true">
+               <font>
+                  <Font name="Arial" size="14.0" />
+               </font>
+            </Label>
+            <JFXListView fx:id="lvcategory" maxWidth="-Infinity" minWidth="-Infinity" prefHeight="145.0" prefWidth="152.0" style="-fx-background-color: #B2B2B2; -fx-text-fill: #ffff8d;">
+               <VBox.margin>
+                  <Insets />
+               </VBox.margin>
+            </JFXListView>
+            <JFXTextField fx:id="txtsearch" focusColor="#ffff8d" labelFloat="true" maxWidth="-Infinity" prefHeight="25.0" prefWidth="175.0" promptText="Search By Name" style="-fx-text-fill: #ffff8d; -fx-prompt-text-fill: #b2b2b2;" unFocusColor="#ffff8d">
+               <font>
+                  <Font size="14.0" />
+               </font>
+               <VBox.margin>
+                  <Insets top="15.0" />
+               </VBox.margin>
+            </JFXTextField>
+            <Label fx:id="lblsearch" text=" ">
+               <VBox.margin>
+                  <Insets top="-7.0" />
+               </VBox.margin>
+            </Label>
+            <Label text="Sort By Price" textFill="#ffff8d" underline="true">
+               <font>
+                  <Font name="Arial" size="14.0" />
+               </font>
+               <VBox.margin>
+                  <Insets top="7.0" />
+               </VBox.margin>
+            </Label>
+            <JFXTextField fx:id="txtfrom" focusColor="#ffff8d" labelFloat="true" maxWidth="-Infinity" prefHeight="25.0" prefWidth="175.0" promptText="From" style="-fx-text-fill: ffff8d; -fx-prompt-text-fill: b2b2b2;" unFocusColor="#ffff8d">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </JFXTextField>
+            <JFXTextField fx:id="txtto" focusColor="#ffff8d" labelFloat="true" maxWidth="-Infinity" prefHeight="25.0" prefWidth="175.0" promptText="To" style="-fx-text-fill: ffff8d; -fx-prompt-text-fill: b2b2b2;" unFocusColor="#ffff8d">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </JFXTextField>
+            <JFXButton buttonType="RAISED" onAction="#search" prefHeight="32.0" prefWidth="81.0" ripplerFill="#ffff8d" style="-fx-border-color: ffff8d; -fx-border-radius: 20; -fx-border-width: 1.5; -fx-background-radius: 20;" text="Search" textFill="#ffff8d">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </JFXButton>
+            <JFXButton buttonType="RAISED" onAction="#viewCart" prefHeight="32.0" prefWidth="81.0" ripplerFill="#ffff8d" style="-fx-border-color: ffff8d; -fx-border-radius: 20; -fx-border-width: 1.5; -fx-background-radius: 20;" text="View Cart" textFill="#ffff8d">
+               <font>
+                  <Font size="14.0" />
+               </font>
+               <VBox.margin>
+                  <Insets top="30.0" />
+               </VBox.margin>
+            </JFXButton>
+         </children>
+      </VBox>
+      <AnchorPane prefWidth="787.0" AnchorPane.leftAnchor="300.0">
+         <children>
+            <ScrollPane fx:id="spproduct" hbarPolicy="NEVER" style="-fx-background-color: #2a2e37; -fx-border-color: #ffff8d  #ffff8d  #ffff8d #b2b2b2; -fx-border-width: 2;" vbarPolicy="ALWAYS">
+               <content>
+                  <TilePane fx:id="tpproductlistview" hgap="30.0" prefHeight="640.0" prefWidth="787.0" style="-fx-background-color: #2A2E37; -fx-border-width: 2 2 2 0;">
+                     <padding>
+                        <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+                     </padding>
+                  </TilePane>
+               </content>
+            </ScrollPane>
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>

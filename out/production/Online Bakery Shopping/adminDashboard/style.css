@@ -1,0 +1,4 @@
+.table-row-cell {
+    -fx-background-color: #B2B2B2, derive(#2A2E37,-5%);
+    -fx-background-insets: 0, 0 0 1 0;
+}

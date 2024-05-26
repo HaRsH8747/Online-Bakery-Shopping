@@ -1,0 +1,17 @@
+.list-view .list-cell {
+    -fx-text-fill: #2A2E37;
+}
+
+.list-view:focused .list-cell:filled:selected{
+        -fx-background-color: #FFFF8D;
+        -fx-text-fill: #B2B2B2;
+}
+
+.list-cell:filled:selected {
+    -fx-background-color: #FFFF8D;
+    -fx-text-fill: #B2B2B2;
+}
+
+.jfx-rippler {
+    -jfx-rippler-fill: #B2B2B2;
+}

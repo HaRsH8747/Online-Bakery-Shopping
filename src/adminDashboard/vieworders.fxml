@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane minWidth="-Infinity" prefHeight="600.0" prefWidth="998.0" stylesheets="@style.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="adminDashboard.ViewordersController">
+   <children>
+      <VBox alignment="TOP_CENTER" minWidth="1000.0" prefHeight="600.0" prefWidth="1000.0" style="-fx-background-color: #2a2e37;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <Label text="View Orders" textFill="#ffff8d" underline="true">
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font>
+               <VBox.margin>
+                  <Insets top="59.0" />
+               </VBox.margin>
+            </Label>
+            <TableView fx:id="tvOrders" maxWidth="-Infinity" prefHeight="432.0" prefWidth="920.0" style="-fx-background-color: #b2b2b2;">
+               <VBox.margin>
+                  <Insets top="55.0" />
+               </VBox.margin>
+               <columns>
+                  <TableColumn fx:id="tcName" editable="false" minWidth="30.0" prefWidth="99.66668701171875" resizable="false" sortable="false" text="Name" />
+                  <TableColumn fx:id="tcContact" editable="false" minWidth="30.0" prefWidth="102.33334350585938" resizable="false" text="Contact" />
+                  <TableColumn fx:id="tcEmail" editable="false" minWidth="30.0" prefWidth="186.66665649414062" resizable="false" text="Email Id" />
+                  <TableColumn fx:id="tcAddress" editable="false" minWidth="30.0" prefWidth="204.33331298828125" resizable="false" text="Address" />
+                  <TableColumn fx:id="tcProduct" editable="false" minWidth="30.0" prefWidth="252.66668701171875" resizable="false" text="Products" />
+                  <TableColumn fx:id="tcCost" editable="false" minWidth="30.0" prefWidth="72.0" resizable="false" text="Cost" />
+               </columns>
+            </TableView>
+         </children>
+      </VBox>
+   </children>
+</AnchorPane>

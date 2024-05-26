@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXRadioButton?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="508.0" prefWidth="699.0" style="-fx-background-color: #2A2E37; -fx-border-color: #ffff8d; -fx-border-width: 2;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="UserCart.UsercartpaymentController">
+   <children>
+      <Label layoutX="285.0" layoutY="45.0" style="-fx-text-fill: ffff8d;" text="Order Payment">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Label>
+      <JFXTextField fx:id="txtname" focusColor="#ffff8d" labelFloat="true" layoutX="234.0" layoutY="118.0" prefHeight="30.0" prefWidth="231.0" promptText="Name" style="-fx-prompt-text-fill: b2b2b2; -fx-text-fill: ffff8d;" unFocusColor="#ffff8d">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </JFXTextField>
+      <JFXRadioButton fx:id="rbCash" layoutX="358.0" layoutY="180.0" selected="true" text="Cash on Delivery" textFill="#ffff8d">
+         <font>
+            <Font size="14.0" />
+         </font>
+         <toggleGroup>
+            <ToggleGroup fx:id="paymentMethod" />
+         </toggleGroup>
+      </JFXRadioButton>
+      <JFXRadioButton fx:id="rbDebit" layoutX="358.0" layoutY="210.0" text="Debit Card" textFill="#ffff8d" toggleGroup="$paymentMethod">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </JFXRadioButton>
+      <JFXTextField fx:id="txtcardno" focusColor="#ffff8d" labelFloat="true" layoutX="234.0" layoutY="237.0" prefHeight="30.0" prefWidth="231.0" promptText="Card No." style="-fx-prompt-text-fill: b2b2b2; -fx-text-fill: ffff8d;" unFocusColor="#ffff8d">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </JFXTextField>
+      <JFXTextField fx:id="txtcvv" focusColor="#ffff8d" labelFloat="true" layoutX="234.0" layoutY="294.0" prefHeight="25.0" prefWidth="231.0" promptText="CVV" style="-fx-prompt-text-fill: b2b2b2; -fx-text-fill: ffff8d;" unFocusColor="#ffff8d">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </JFXTextField>
+      <JFXTextField fx:id="txtamount" editable="false" focusColor="#ffff8d" labelFloat="true" layoutX="234.0" layoutY="349.0" prefHeight="30.0" prefWidth="231.0" promptText="Amount" style="-fx-prompt-text-fill: b2b2b2; -fx-text-fill: ffff8d;" unFocusColor="#ffff8d">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </JFXTextField>
+      <JFXButton buttonType="RAISED" layoutX="234.0" layoutY="421.0" onAction="#payorder" prefHeight="32.0" prefWidth="83.0" ripplerFill="#ffff8f" style="-fx-border-color: ffff8d; -fx-border-radius: 20; -fx-border-width: 1.5; -fx-background-radius: 20;" text="Pay" textFill="#ffff8d">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </JFXButton>
+      <JFXButton buttonType="RAISED" layoutX="382.0" layoutY="421.0" onAction="#close" prefHeight="32.0" prefWidth="83.0" ripplerFill="#ffff8d" style="-fx-border-color: ffff8d; -fx-border-radius: 20; -fx-border-width: 1.5; -fx-background-radius: 20;" text="Cancel" textFill="#ffff8d">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </JFXButton>
+      <Label fx:id="lblvalidccnumber" layoutX="482.0" layoutY="252.0" />
+      <Label layoutX="235.0" layoutY="180.0" text="Payment Method :" textFill="#b2b2b2">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>

@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXComboBox?>
+<?import com.jfoenix.controls.JFXTextArea?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="approductentry" prefHeight="600.0" prefWidth="998.0" style="-fx-background-color: #2a2e37;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="adminDashboard.ProductentryController">
+   <children>
+      <Label layoutX="435.0" layoutY="39.0" text="Product Entry" textFill="#ffff8d">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Label>
+      <JFXTextField fx:id="txtproductname" focusColor="#ffff8d" labelFloat="true" layoutX="382.0" layoutY="121.0" prefHeight="25.0" prefWidth="224.0" promptText="Product Name" style="-fx-prompt-text-fill: b2b2b2; -fx-text-fill: ffff8d;" unFocusColor="#ffff8d">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </JFXTextField>
+      <JFXButton buttonType="RAISED" layoutX="382.0" layoutY="180.0" onAction="#fileChooser" prefHeight="34.0" prefWidth="108.0" ripplerFill="#ffff8f" style="-fx-border-color: ffff8d; -fx-border-radius: 20; -fx-border-width: 1.5; -fx-background-radius: 20;" text="Select Image" textFill="#ffff8d">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </JFXButton>
+      <ImageView fx:id="ivproductimage" fitHeight="93.0" fitWidth="117.0" layoutX="502.0" layoutY="180.0" pickOnBounds="true" preserveRatio="true" />
+      <JFXTextArea fx:id="txtdescription" focusColor="#ffff8d" labelFloat="true" layoutX="382.0" layoutY="291.0" prefHeight="58.0" prefWidth="224.0" promptText="Short Description" style="-fx-prompt-text-fill: b2b2b2; -fx-text-fill: ffff8d;" unFocusColor="#ffff8d">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </JFXTextArea>
+      <JFXTextField fx:id="txtprice" focusColor="#ffff8d" labelFloat="true" layoutX="382.0" layoutY="382.0" prefHeight="25.0" prefWidth="224.0" promptText="Price" style="-fx-prompt-text-fill: b2b2b2; -fx-text-fill: ffff8d;" unFocusColor="#ffff8d">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </JFXTextField>
+      <JFXComboBox fx:id="cbcategory" focusColor="#ffff8d" labelFloat="true" layoutX="382.0" layoutY="442.0" prefHeight="32.0" prefWidth="224.0" promptText="Category" style="-fx-font-size: 14; -fx-prompt-text-fill: b2b2b2; -fx-text-fill: ffff8d;" unFocusColor="#ffff8d" />
+      <JFXButton buttonType="RAISED" layoutX="440.0" layoutY="524.0" onAction="#addProduct" prefHeight="34.0" prefWidth="108.0" ripplerFill="#ffff8d" style="-fx-border-color: ffff8d; -fx-border-radius: 20; -fx-border-width: 1.5; -fx-background-radius: 20;" text="SUBMIT" textFill="#ffff8d">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </JFXButton>
+      <JFXButton buttonType="RAISED" layoutX="619.0" layoutY="442.0" onAction="#addCategory" ripplerFill="#ffff8d" style="-fx-border-color: ffff8d; -fx-border-radius: 20; -fx-border-width: 1.5; -fx-background-radius: 20;" text="Add Category" textFill="#ffff8d">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </JFXButton>
+      <JFXTextField fx:id="txtaddcategory" focusColor="#ffff8d" labelFloat="true" layoutX="382.0" layoutY="442.0" prefHeight="32.0" prefWidth="224.0" promptText="Category" style="-fx-prompt-text-fill: b2b2b2;" unFocusColor="#ffff8d" visible="false">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </JFXTextField>
+   </children>
+</AnchorPane>
